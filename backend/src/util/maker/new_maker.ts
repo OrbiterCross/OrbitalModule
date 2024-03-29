@@ -216,8 +216,8 @@ export async function startNewMakerTrxPull() {
         errorLogger.error(`Consumption transaction list failed`, error);
         if (Date.now() - prevAlert > 1000 * 60) {
           prevAlert = Date.now();
-          telegramBot.sendMessage(`MQ error ${error.message}`).catch(error => {
-            this.logger.error(`send telegram message error ${error.stack}`);
+          telegramBot.sendMessage(`MQ error  ${JSON.stringify(message)} - ${error.message}`).catch(error => {
+            this.logger.error(`send telegram message error ${error.stack} , ${JSON.stringify(message)}`);
           });
         }
         return true;
