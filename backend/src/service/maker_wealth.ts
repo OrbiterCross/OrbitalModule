@@ -139,6 +139,7 @@ async function getTokenBalance(
       case 30:
       case 31:
       case 38:
+      case 54:
         // const balanceService = 
         // value = await balanceService.getBalance(makerAddress, tokenAddress);
         if ([9, 99].includes(chainId) && tokenAddress.toLowerCase() === '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48') {
