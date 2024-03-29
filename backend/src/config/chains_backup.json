@@ -1008,6 +1008,8 @@
         "networkId": "70700",
         "explorers": [],
         "contract": {
+            "0x13E46b2a3f8512eD4682a8Fb8B560589fE3C2172": "OrbiterRouterV3",
+            "0xd9d74a29307cc6fc8bf424ee4217f1a587fbc8dc": "OBSource"
         },
         "contracts": [
         ]
