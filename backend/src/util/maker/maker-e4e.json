@@ -8886,7 +8886,7 @@
         "precision": 18,
         "c1TradingFee": 0.0005,
         "c2TradingFee": 0.0005,
-        "c1GasFee": 0.5,
+        "c1GasFee": 23,
         "c2GasFee": 10,
         "c1MinPrice": 0.00005,
         "c1MaxPrice": 1,
