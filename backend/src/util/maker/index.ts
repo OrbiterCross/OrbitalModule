@@ -705,17 +705,22 @@ export async function sendTxConsumeHandle(result: any) {
         return;
       }
     }
-    telegramBot.sendMessage(`Send Transaction Error ${makerAddress} toChain: ${toChainID}, transactionID: ${transactionIDList}, errmsg: ${response.txid}`).catch(error => {
-      accessLogger.error(`send telegram message error ${error.stack}`);
-    });
-    let alert = 'Send Transaction Error Count ' + transactionIDList.length;
-    try {
-      doSms(alert);
-    } catch (error) {
-      errorLogger.error(
-        `[${transactionIDList}] sendTransactionErrorMessage = ${error}`
-      );
+    if(+toChainID === 30 && (response.txid.includes('eth_maxPriorityFeePerGas') || response.txid.includes('eth_getTransactionCount'))) {
+      // Retry
+    } else {
+      telegramBot.sendMessage(`Send Transaction Error ${makerAddress} toChain: ${toChainID}, transactionID: ${transactionIDList}, errmsg: ${response.txid}`).catch(error => {
+        accessLogger.error(`send telegram message error ${error.stack}`);
+      });
+      let alert = 'Send Transaction Error Count ' + transactionIDList.length;
+      try {
+        doSms(alert);
+      } catch (error) {
+        errorLogger.error(
+          `[${transactionIDList}] sendTransactionErrorMessage = ${error}`
+        );
+      }
     }
+   
   } else {
 
     errorLogger.error(
