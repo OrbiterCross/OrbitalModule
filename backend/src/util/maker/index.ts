@@ -705,7 +705,7 @@ export async function sendTxConsumeHandle(result: any) {
         return;
       }
     }
-    if(+toChainID === 30 && (response.txid.includes('eth_maxPriorityFeePerGas') || response.txid.includes('eth_getTransactionCount'))) {
+    if(+toChainID === 30 && (response.txid.includes('eth_maxPriorityFeePerGas') || response.txid.includes('eth_getTransactionCount') || response.txid.includes('eth_getBlockByNumber'))) {
       // Retry
     } else {
       telegramBot.sendMessage(`Send Transaction Error ${makerAddress} toChain: ${toChainID}, transactionID: ${transactionIDList}, errmsg: ${response.txid}`).catch(error => {
