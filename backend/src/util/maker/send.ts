@@ -1036,7 +1036,7 @@ export async function sendConsumer(value: any) {
 
   }
   if (chainID == 1 || chainID == 5) {
-    maxPrice = 140;
+    maxPrice = 250;
   }
   const gasPrices = await getCurrentGasPrices(
     toChain,
