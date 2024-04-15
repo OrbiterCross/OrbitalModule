@@ -1015,6 +1015,10 @@
         ]
     },
     {
+        "api": {
+            "url": "",
+            "key": ""
+        },
         "name": "X Layer mainnet",
         "watch": [
             "rpc"
