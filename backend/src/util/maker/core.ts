@@ -40,7 +40,8 @@ const MAX_BITS: any = {
   zeta: 256,
   mode: 256,
   blast: 256,
-  apex: 256
+  apex: 256,
+  xlayer: 256
 };
 export const CHAIN_INDEX: any = {
   1: "eth",
@@ -95,7 +96,8 @@ export const CHAIN_INDEX: any = {
   40: "blast",
   41: "zeta",
   47: "mode",
-  53: "apex"
+  53: "apex",
+  27: "xlayer"
 };
 
 export const SIZE_OP = {
