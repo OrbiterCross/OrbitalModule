@@ -27554,6 +27554,41 @@ initMakerList.push(...[
     }
   ])
 
+initMakerList.push(...[{
+  "id": "1-27/ETH",
+  "tName": "ETH",
+  "makerAddress": "0xe4edb277e41dc89ab076a1f049f4a3efa700bce8",
+  "c1ID": 1,
+  "c2ID": 27,
+  "c1Name": "mainnet",
+  "c2Name": "xlayer",
+  "t1Address": "0x0000000000000000000000000000000000000000",
+  "t2Address": "0x5a77f1443d16ee5761d310e38b62f77f726bc71c",
+  "precision": 18,
+  "c1TradingFee": 0.0008,
+  "c2TradingFee": 0.0055,
+  "c1GasFee": 0,
+  "c2GasFee": 0.5,
+  "c1MinPrice": 0.00005,
+  "c1MaxPrice": 3,
+  "c2MinPrice": 0.00005,
+  "c2MaxPrice": 3,
+  "c1AvalibleDeposit": 1000,
+  "c2AvalibleDeposit": 1000,
+  "c1AvalibleTimes": [
+    {
+      "startTime": 0,
+      "endTime": 99999999999999
+    }
+  ],
+  "c2AvalibleTimes": [
+    {
+      "startTime": 0,
+      "endTime": 99999999999999
+    }
+  ]
+}])
+
 const list1 = cloneDeep(initMakerList).filter(row=> row.c2ID == 14 && row.makerAddress && row.makerAddress.toLowerCase() === '0x80c67432656d59144ceff962e8faf8926599bcf8');
 
 const listE4e = cloneDeep(initMakerList).filter(row => row.makerAddress && row.makerAddress.toLowerCase() === '0x80c67432656d59144ceff962e8faf8926599bcf8').map(row => {
